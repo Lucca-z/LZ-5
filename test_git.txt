@@ -1,1 +1,2 @@
 Treinando comandos do Git
+Fazendo Alterações no Git
