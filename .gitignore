@@ -11,3 +11,9 @@
 *.lai
 *.la
 *.a
+
+#arquivos gerados pelo Emacs
+*.*~
+
+#executável
+lz5
