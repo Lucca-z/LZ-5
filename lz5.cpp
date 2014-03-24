@@ -1,22 +1,24 @@
 #include<iostream>
 
+using namespace std;
+
 int main(){
-  std::cout<<"Olá, eu sou o LZ-5 e vou te ajudar a simular uma população para estudos em Melhoramento Genético Animal!"<<std::endl;
+  cout<<"Olï¿½, eu sou o LZ-5 e vou te ajudar a simular uma populaï¿½ï¿½o para estudos em Melhoramento Genï¿½tico Animal!"<<std::endl;
   
-  std::cout<<"Você gostaria de continuar?"<<std::endl;
-  std::cout<<"Sim[s] ou Não[n]"<<std::endl;
+  cout<<"Vocï¿½ gostaria de continuar?"<<endl;
+  cout<<"Sim[s] ou Nï¿½o[n]"<<endl;
 
   char resp='s';
-  std::cin>>resp;
+  cin>>resp;
 
   switch(resp){
   case 'S':
-  case 's': std::cout<<"Infelizmente não será possível pois o Rafael e a Michele ainda não programaram nada e estou esperando para trabalhar. Volte mais tarde. TCHAU!!!!"<<std::endl;
+  case 's': cout<<"Infelizmente nï¿½o serï¿½ possï¿½vel pois o Rafael e a Michele ainda nï¿½o programaram nada e estou esperando para trabalhar. Volte mais tarde. TCHAU!!!!"<<std::endl;
     break;
   case 'N':
-  case 'n': std::cout<<"Que bom, eu não teria nada para fazer mesmo! A Michele e o Rafael ainda não enviaram nada para mim. Volte outra hora. TCHAU!!!"<<std::endl;
+  case 'n': cout<<"Que bom, eu nï¿½o teria nada para fazer mesmo! A Michele e o Rafael ainda nï¿½o enviaram nada para mim. Volte outra hora. TCHAU!!!"<<std::endl;
     break;  
-  default: std::cout<<"Respondeu mal!!! Não vou mais trabalhar então! TCHAU!!!" <<std::endl;
+  default: cout<<"Respondeu mal!!! Nï¿½o vou mais trabalhar entï¿½o! TCHAU!!!" <<endl;
   }
 
   return 0;
