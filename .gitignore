@@ -14,6 +14,15 @@
 
 #arquivos gerados pelo Emacs
 *.*~
+*~
+
+#Diretórios diversos
+PadraoDocumentacao/
+html/
+latex/
+
+#Arquivos específicos
+mensagemCommit
 
 #executável
 lz5
