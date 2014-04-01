@@ -3,9 +3,10 @@
 
 #include <utility>
 #include "alelle.h"
+#include <iostream>
 
-
-using namespace std;
+using std::cout;
+using std::endl;
 
 
 class Locus{
@@ -21,7 +22,7 @@ class Locus{
   Locus(); //Necessário um construtor para inicializar Objeto membro;
   void setAlelles(short int, short int);
   void getAlelles()const;
-  void getPosition() const;
+  inline void getPosition() const{cout<<"A posição do locus é: "<<position<<endl;};
 };
 
 #endif
