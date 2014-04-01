@@ -3,6 +3,9 @@
 
 #include<iostream>
 
+using std::cout;
+using std::endl;
+
 class Alelle
 {
 private:
@@ -11,7 +14,7 @@ private:
   short int state;
 public:
   Alelle();
-  inline void setAlelle(short int){state = st;};
+  inline void setAlelle(short int st){state = st;};
   inline void getAlelle() const {cout<<"O estado do Alelo: "<<id<<" é: "<<state<<endl;};
 };
 
