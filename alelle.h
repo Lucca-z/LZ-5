@@ -11,7 +11,7 @@ private:
   short int state;
 public:
   Alelle();
-  void setAlelle(short int);
+  inline void setAlelle(short int){state = st;};
   inline void getAlelle() const {cout<<"O estado do Alelo: "<<id<<" é: "<<state<<endl;};
 };
 
