@@ -1,9 +1,7 @@
 #include "locus.h"
 #include "alelle.h"
 #include <utility>
-#include <iostream>
 
-using namespace std;
 
 //Inicializando uma variável static
 
@@ -26,8 +24,8 @@ void Locus::getAlelles()const{
   genotype.first.getAlelle();
   genotype.second.getAlelle();
 }
-
+/*
 void Locus::getPosition() const{
   cout << "A posição do Locus é: " << position << endl;
 }
-
+*/
