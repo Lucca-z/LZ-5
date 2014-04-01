@@ -1,6 +1,8 @@
 #ifndef _ALELLE_H
 #define _ALELLE_H
 
+#include<iostream>
+
 class Alelle
 {
 private:
@@ -10,7 +12,7 @@ private:
 public:
   Alelle();
   void setAlelle(short int);
-  void getAlelle() const;
+  inline void getAlelle() const {cout<<"O estado do Alelo: "<<id<<" é: "<<state<<endl;};
 };
 
 #endif
