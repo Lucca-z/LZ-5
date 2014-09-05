@@ -14,7 +14,6 @@ int main(){
   a.getPosition();
   b.getAlelles();
   b.getPosition();
-  //comentario 2
 
 return 0;
 }
