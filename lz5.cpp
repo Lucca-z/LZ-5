@@ -20,7 +20,7 @@ int main(){
   std::cout<<"A frequência armazenada em p é: "<<p.freq<<std::endl;
 
   //Criando um alelo teste
-  alelo a(p);
+  alelo a(0);
 
   //Mostrando o alelo
   std::cout<<"O estado do alelo a é: "<<a.getEstado()<<std::endl;

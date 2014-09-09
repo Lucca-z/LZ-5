@@ -10,22 +10,22 @@
 //! \date 01/04/2014
 
 class alelo{
- private:
-  
-  bool estado; //!< Estado do alelo. False representa o alelo a e true representa o alelo A.                               
-  int id;      //!< Identificação única do alelo.                                   
+ private:  
+  bool estado;                                      //!< Estado do alelo. False representa o alelo a e true representa o alelo A.                               
+  int id;                                           //!< Identificação única do alelo.
+                                   
  public:
-  //!Construtor padrão. Cria um alelo vazio.
-  inline alelo():estado(),id(){};
-  
-  //! Construtor.
+  //!< Construtor padrão. Cria um alelo com estado vazio mas com um id.
+  alelo();               
+  //! Construtor de alelo com estado aleatório. 
   alelo(param& p);
-  
-  //! Função que retorna o estado do alelo.                          
-  inline bool getEstado(){return estado;}
-
-  //! Função que retorna o id do alelo.
-  inline int getId(){return id;}
+  //! Construtor de alelo com estado definido pelo usuário (est).
+  alelo(bool est);
+  //! Construtor de cópia
+  alelo(alelo& a);                         
+                              
+  inline bool getEstado()const{return estado;}          //!< Função que retorna o estado do alelo.  
+  inline int getId()const{return id;}                   //!< Função que retorna o id do alelo.
 };
 
 #endif
