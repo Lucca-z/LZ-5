@@ -20,7 +20,7 @@ int main(){
   reader(inp);
   cout<<"Iniciando a Simulacao"<<endl;
   Genome C(inp);
-  C.getScrom();
+  
 return 0;
 }
 
@@ -31,18 +31,9 @@ void reader(Input& inp){
   using std::cin;
 
   cout<<"Iniciando a leitura do cartão"<<endl;
-  cin>>inp.s_gen;
-  cin>>inp.n_crom;
-  int short sc;
-  for(int i=0; i<inp.n_crom; i++){
-    cin>>sc;
-    inp.s_crom.push_back(sc);
-  }
   cin>>inp.n_al;
-  cin>>inp.a_dist;
   char ta;
   float f;
- 
   for(int i=0; i<inp.n_al; i++){
     cin>>ta;  
     cin>>f;  
