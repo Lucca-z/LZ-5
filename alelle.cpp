@@ -1,3 +1,4 @@
+//! \file alelle.cpp
 #include "alelle.h"
 #include "input.h"
 #include <iostream>
@@ -8,10 +9,14 @@ using std::cout;
 using std::endl;
 
 
-extern gsl_rng* pr;
+extern gsl_rng* pr; 
 
-static unsigned int id_count = 0;
-static unsigned int count = 0;
+static unsigned int id_count = 0; //!< variável que define o id dos alelos.
+static unsigned int count = 0; //!< variável que define a posição dos alelos.
+
+//! Construtor que recebe um tipo Input, inicializa de forma aleatória o estado do alelo de acordo com a sua frequencia, atribui o tipo de alelo de acordo com o especificado pelo usuário, atribui o efeito para o alelo, atribui automaticamente o id e a posição do alelo.
+//! \since 12/09/2014
+//! \Input inp Estrutura do tipo Input de onde são retirados o tipo e a frequência do alelo.
 
 Alelle::Alelle(Input& inp):position(count),id_alelle(id_count)
 {
