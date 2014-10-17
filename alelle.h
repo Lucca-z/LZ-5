@@ -13,13 +13,15 @@ class Alelle
 {
  private:
   bool state;
-  unsigned int position;
+  double position;
   float effect;
   unsigned int id_alelle;
   char type;
  public:
-  //! Construtor de alelo com os parametros passados pelo usuario.
-  Alelle(Input& inp);
+  //! Construtor de alelo do tipo poligene com os parametros passados pelo usuario.
+  Alelle(Input&);
+  //! Construtor de alelo do tipo SNP com os parametros passados pelo usuario.
+  Alelle(Input&, char);
   bool getState();                      //!< Função que retorna o estado do alelo.
   unsigned int getPosition();           //!< Função que retorna a posição do alelo.
   float getEff();                      //!< Função que retorna o efeito do alelo.
