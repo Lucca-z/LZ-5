@@ -5,7 +5,7 @@
 
 extern gsl_rng* prand; 
 
-static unsigned int contador=0; //!< variável que define o id dos alelos
+static unsigned int contador=1; //!< variável que define o id dos alelos
 
 //! Construtor que atribui um id automaticamente e deixa o estado do alelo vazio.
 //! \author Ricardo da Fonseca ricardo@dracena.unesp.br

@@ -12,20 +12,20 @@
 class alelo{
  private:  
   bool estado;                                      //!< Estado do alelo. False representa o alelo a e true representa o alelo A.                               
-  int id;                                           //!< Identificação única do alelo.
+  unsigned int id;                                  //!< Identificação única do alelo.
                                    
  public:
-  //!< Construtor padrão. Cria um alelo com estado vazio mas com um id.
+  //! Construtor padrão. Cria um alelo com estado vazio mas com um id.
   alelo();               
   //! Construtor de alelo com estado aleatório. 
   alelo(param& p);
   //! Construtor de alelo com estado definido pelo usuário (est).
   alelo(bool est);
   //! Construtor de cópia
-  alelo(alelo& a);                         
+  alelo(const alelo& a);                         
                               
   inline bool getEstado()const{return estado;}          //!< Função que retorna o estado do alelo.  
-  inline int getId()const{return id;}                   //!< Função que retorna o id do alelo.
+  inline unsigned int getId()const{return id;}          //!< Função que retorna o id do alelo.
 };
 
 #endif
