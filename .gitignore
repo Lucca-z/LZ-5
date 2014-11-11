@@ -15,6 +15,7 @@
 #arquivos gerados pelo Emacs
 *.*~
 *~
+\#*
 
 #Diretórios diversos
 PadraoDocumentacao/

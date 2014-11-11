@@ -1,7 +1,7 @@
-//! \file alelo.h
+//! \file genoma.h
 
 //****************************************************************************************************
-//* alelo.h                                                                                          *
+//* genoma.h                                                                                         *
 //*                                                                                                  *
 //* Copyright (c) 2008 LuCCA-Z (Laboratório de Computação Científica Aplicada à Zootecnia),          *
 //* Rodovia Comandante João Ribeiro de Barros (SP 294), km 651. UNESP,                               *
@@ -24,32 +24,34 @@
 //* from Vicosa Federal University, who had great influence in ideas behind the LZ5's development.   *
 //*                                                                                                  *
 //****************************************************************************************************
-#ifndef __ALELO_H__
-#define __ALELO_H__
+#ifndef _GENOMA_H_
+#define _GENOMA_H_
 
-//!Classe que define um alelo. 
+#include<alelo.h>
 
-//! A classe alelo representa um alelo qualquer do genoma por meio do armazenamento do seu estado, A ou a e de seu id, o qual é um valor que identifica de maneira única o alelo.
+using std::vector;
+using std::map;
+
+//!Classe que define um genoma. 
+
+//! A classe genoma representa o genoma de um indivíduo qualquer. O modelo assumido aqui considera o genoma como sendo constituído de um único cromossomo, facilitando as manipulações e gerações de eventos como recombinação. Os cromossomos podem ser "reconstituídos" sempre que necessário pela informação contida no vetor ultpos. 
 //! \author Ricardo da Fonseca
-//! \date 01/04/2014
+//! \date 28/10/2014
 
-class alelo{
- private:  
-  bool estado;                                      //!< Estado do alelo. False representa o alelo a e true representa o alelo A.                               
-  unsigned int id;                                  //!< Identificação única do alelo.
-                                   
+class genoma{
+ private:
+  vector<alelo> cromp;                      //!< Representa a cromátide homóloga vindo do pai do indivíduo;
+  vector<alelo> cromm;                      //!< Representa a cromátide homóloga vindo da mãe do indivíduo;
+  static map<double,char> posTipo;          //!< Mapa contendo a posição física do loco no cromossomo em key e o tipo de loco em value (q = QTL e m = Marcador);
+  static vector<unsigned int> ultpos;       //!< Vetor que armazena as últimas posições (do vetor) de cada cromossomo. Utilizado para "reconstituir" os cromossomos. 
+  static vector<double> eflocos;            //!< Vetor de efeitos dos locos
  public:
-  //! Construtor padrão. Cria um alelo com estado vazio mas com um id.
-  alelo();               
-  //! Construtor de alelo com estado aleatório. 
-  alelo(param& p);
-  //! Construtor de alelo com estado definido pelo usuário (est).
-  alelo(bool est);
-  //! Construtor de cópia
-  alelo(const alelo& a);                         
-                              
-  inline bool getEstado()const{return estado;}          //!< Função que retorna o estado do alelo.  
-  inline unsigned int getId()const{return id;}          //!< Função que retorna o id do alelo.
+  //! Construtor padrão. Cria um genoma vazio.
+  genoma(){};
+  //! Construtor que cria um genoma com base nos parâmetros fornecidos pelo usuário em p.
+  genoma(param& p);
+  //! Construtor de cópia. Cria um genoma a partir da cópia de um outro genoma.
+  genoma(const genoma& g);
 };
 
 #endif
