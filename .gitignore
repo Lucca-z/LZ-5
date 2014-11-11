@@ -19,6 +19,7 @@
 #arquivos gerados pelo Emacs
 *.*~
 *~
+\#*
 
 #Diretórios diversos
 PadraoDocumentacao/
@@ -27,6 +28,12 @@ latex/
 
 #Arquivos específicos
 mensagemCommit
+
+#arquivos gerados pelo Doxygen
+*.bak
+
+#arquivos gerados pelo Dia
+*.autosave
 
 #executável
 lz5
