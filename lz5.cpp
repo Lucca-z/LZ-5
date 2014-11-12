@@ -44,4 +44,10 @@ int main(){
 void input(param& p){
   using std::cin;
   cin>>p.freq;
+  using std::cin;
+  cin>>p.nCrom;
+  double cM = 0;
+  for(int i=0; i<nCrom; i++){
+    s_croms.push_back(cM);
+  }
 }
