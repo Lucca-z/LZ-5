@@ -11,6 +11,10 @@
 *.lai
 *.la
 *.a
+<<<<<<< HEAD
+#Igonar Arquivos
+*~
+=======
 
 #arquivos gerados pelo Emacs
 *.*~
@@ -33,3 +37,4 @@ mensagemCommit
 
 #executável
 lz5
+>>>>>>> 98d33079858efbeeb31f77f4250669f687192dcd
